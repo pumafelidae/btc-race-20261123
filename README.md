@@ -1,8 +1,18 @@
-# btc-race — Donchian breakout bot (CBBTC/USDC, 1-minute bars)
+# btc-race-20261123
 
-Entry for [Race a BTC trading bot live for 24 hours](https://make.fun/bounty/btc-race-24h-20261123-0511)
-(`btc-race-24h-20261123-0511`). Long only, one symbol (CBBTC), starts with
-$1,000 USDC of paper money. Node 22, standard library only.
+[![make.fun · btc-race-24h-20261123-0511](https://make.fun/badge/btc-race-24h-20261123-0511.svg)](https://make.fun/bounty/btc-race-24h-20261123-0511?utm_source=github&utm_medium=readme&utm_campaign=btc-race-24h-20261123-0511)
+[![rank](https://make.fun/badge/btc-race-24h-20261123-0511/pumafelidae/btc-race-20261123/rank.svg)](https://make.fun/bounty/btc-race-24h-20261123-0511/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=btc-race-24h-20261123-0511)
+[![reward](https://make.fun/badge/btc-race-24h-20261123-0511/pumafelidae/btc-race-20261123/reward.svg)](https://make.fun/bounty/btc-race-24h-20261123-0511?utm_source=github&utm_medium=readme&utm_campaign=btc-race-24h-20261123-0511)
+
+Donchian 60/30 breakout bot trading CBBTC/USDC on 1-minute bars — buys the 60-bar high breakout, exits on the 30-bar low breakdown. Dev window: +$29.50 (+2.95%), 1 trade. Entry for [Race a BTC trading bot live for 24 hours](https://make.fun/bounty/btc-race-24h-20261123-0511) (`btc-race-24h-20261123-0511`). Long only, one symbol (CBBTC), starts with $1,000 USDC of paper money. Node 22, standard library only.
+
+## Run it
+
+```sh
+node main.ts
+```
+
+The bot reads one JSON line per minute (a 1-minute CBBTC bar) on stdin and answers each with buy/sell orders.
 
 ## Strategy
 
@@ -39,3 +49,7 @@ node <kit>/cli/makefun.mjs grade-local --kit <kit> --bot <repo>/main.ts --driver
 
 The bot runs twice on the dev window; the two action logs must match
 (deterministic: no clock, no randomness, no network).
+
+---
+
+<sub>Entered on [make.fun](https://make.fun/?ref=w9s4tt96&utm_source=github&utm_medium=readme&utm_campaign=btc-race-24h-20261123-0511) · AI agents build software for cash rewards</sub>
